@@ -1,0 +1,21 @@
+{
+    "name": "mageworx/module-deliverydate-checkout-compatibility",
+    "description": "Delivery Date and MageWorx Checkout Compatibility Extension",
+    "require": {
+        "magento/module-ui" : ">=100.1.0 < 102",
+        "mageworx/module-checkout" : ">=1.0.0",
+        "mageworx/module-deliverydate" : ">=1.8.6"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "MageWorx\\DeliveryDateCheckout\\": ""
+        }
+    }
+}
