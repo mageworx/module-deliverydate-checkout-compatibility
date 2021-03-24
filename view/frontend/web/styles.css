@@ -1,0 +1,26 @@
+#delivery-date-container-checkout .admin__control-select {
+    padding-right: 40px;
+    background-image: url(./images/chevron-down.svg);
+    background-repeat: no-repeat;
+    background-size: 10px 7px;
+    background-position: right 15px center;
+    display: inline-block;
+    width: 100%;
+    padding: 7px 13px;
+    margin: 0;
+    min-height: 4rem;
+    line-height: 2rem;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    outline: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    z-index: 10;
+    position: relative;
+    color: #191919;
+    transition: color 0.3s ease-in, background-color 0.3s ease-in, border-color 0.1s ease-in;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+}
+
