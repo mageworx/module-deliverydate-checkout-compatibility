@@ -1,0 +1,14 @@
+.delivery-date-container-checkout .admin__control-text,
+.delivery-date-container-checkout .admin__control-select{
+    background-color: #f4f4f4!important;
+    border-color: #ffffff!important;
+    background-image: url(./images/chevron-down.svg)!important;
+}
+
+#delivery-date-container .admin__control-select,
+#delivery-date-container .admin__control-text,
+#delivery-date-container .admin__control-textarea {
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
