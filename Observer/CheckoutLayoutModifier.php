@@ -3,6 +3,7 @@
  * Copyright © MageWorx. All rights reserved.
  * See LICENSE.txt for license details.
  */
+declare(strict_types=1);
 
 namespace MageWorx\DeliveryDateCheckout\Observer;
 
@@ -45,7 +46,12 @@ class CheckoutLayoutModifier implements ObserverInterface
 
         // Update Date component
         $originalElement['children']['datetime_container']['children']['delivery_day']['config']['template'] =
-        'MageWorx_DeliveryDateCheckout/form/field';
+            'MageWorx_DeliveryDateCheckout/form/field';
+        if ($originalElement['children']['datetime_container']['children']['delivery_day']['config']['elementTmpl'] ===
+            'MageWorx_DeliveryDate/checkout/form/element/date/calendar') {
+            $originalElement['children']['datetime_container']['children']['delivery_day']['config']['elementTmpl'] =
+                $this->getDeliveryDayInputTemplate();
+        }
 
         // Update Time component
         $originalElement['children']['datetime_container']['children']['delivery_time']['config']['template'] =
@@ -54,5 +60,13 @@ class CheckoutLayoutModifier implements ObserverInterface
         $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']
         ['shippingMethods']['children']['shipping_method_additional_data']['children'][$nameInLayout] =
             $originalElement;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeliveryDayInputTemplate(): string
+    {
+        return 'MageWorx_DeliveryDateCheckout/form/element/date/calendar';
     }
 }
