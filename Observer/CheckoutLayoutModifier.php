@@ -23,7 +23,7 @@ class CheckoutLayoutModifier implements ObserverInterface
      */
     public function execute(Observer $observer)
     {
-        /** @var \MageWorx\Checkout\Api\LayoutModifierAccess $subject */
+        /** @var \MageWorx\Checkout\Api\LayoutModifierAccessInterface $subject */
         $subject = $observer->getSubject();
         /** @var array $jsLayout */
         $jsLayout = &$subject->getJsLayout();

@@ -9,17 +9,17 @@
        autocomplete="off"
        data-bind="
     hasFocus: focused,
-    datepicker: {
-        storage: shiftedValue,
-        options: options
-    },
     valueUpdate: valueUpdate,
     attr: {
         value: shiftedValue,
         name: inputName,
-        id: 'delivery-day-' + method.method_code + '_' + method.carrier_code,
+        id: uid,
         placeholder: placeholder,
         'aria-describedby': noticeId,
         disabled: disabled,
         autocomplete: autocomplete
+    },
+    datepicker: {
+        storage: shiftedValue,
+        options: options
     }"/>
