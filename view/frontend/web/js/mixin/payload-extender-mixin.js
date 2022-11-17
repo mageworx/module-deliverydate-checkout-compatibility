@@ -7,14 +7,10 @@ define([
 ], function (wrapper, registry, _) {
     'use strict';
 
-    console.log('INITIALIZE PAYLOAD EXTENDER MIXIN');
-
     return function (originalPayloadExtender) {
 
         return wrapper.wrap(originalPayloadExtender, function (originalAction) {
             if (!_.isEmpty(mwDeliveryDateConfig) && mwDeliveryDateConfig.enabled) {
-                console.log('Mageworx Delivery Date payload extender.');
-
                 let payload = originalAction(),
                     shippingAddress = payload.addressInformation.shipping_address,
                     deliveryDateSource = registry.get('deliveryDateProvider'),
