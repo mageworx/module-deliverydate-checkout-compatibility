@@ -45,17 +45,14 @@ class CheckoutLayoutModifier implements ObserverInterface
         unset($originalElement['children']['comment_container']);
 
         // Update Date component
-        $originalElement['children']['datetime_container']['children']['delivery_day']['config']['template'] =
+        $originalElement['children']['datetime_container']['childTemplates']['delivery_day']['config']['template'] =
             'MageWorx_DeliveryDateCheckout/form/field';
-        if ($originalElement['children']['datetime_container']['children']['delivery_day']['config']['elementTmpl'] ===
+        if (isset($originalElement['children']['datetime_container']['children']['delivery_day']['config']['elementTmpl'])
+            && $originalElement['children']['datetime_container']['children']['delivery_day']['config']['elementTmpl'] ===
             'MageWorx_DeliveryDate/checkout/form/element/date/calendar') {
             $originalElement['children']['datetime_container']['children']['delivery_day']['config']['elementTmpl'] =
                 $this->getDeliveryDayInputTemplate();
         }
-
-        // Update Time component
-        $originalElement['children']['datetime_container']['children']['delivery_time']['config']['template'] =
-            'MageWorx_DeliveryDateCheckout/form/field';
 
         $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']
         ['shippingMethods']['children']['shipping_method_additional_data']['children'][$nameInLayout] =

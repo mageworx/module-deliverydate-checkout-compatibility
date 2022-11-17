@@ -5,8 +5,8 @@
 var config = {
     config: {
         mixins: {
-            'MageWorx_DeliveryDate/js/checkout/time_range': {
-                'MageWorx_DeliveryDateCheckout/js/mixin/time-range-mixin': true
+            'Magento_Checkout/js/model/shipping-save-processor/payload-extender': {
+                'MageWorx_DeliveryDateCheckout/js/mixin/payload-extender-mixin': true
             }
         }
     }
