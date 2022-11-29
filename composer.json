@@ -3,11 +3,11 @@
     "description": "Delivery Date and MageWorx Checkout Compatibility Extension",
     "require": {
         "magento/module-ui" : ">=100.1.0 < 102",
-        "mageworx/module-checkout" : ">=1.0.0",
-        "mageworx/module-deliverydate" : ">=1.8.6 < 1.14"
+        "mageworx/module-checkout" : ">=1.0.15",
+        "mageworx/module-deliverydate" : ">=1.17.1"
     },
     "type": "magento2-module",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
